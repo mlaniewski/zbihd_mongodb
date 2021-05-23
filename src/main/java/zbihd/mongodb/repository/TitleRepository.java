@@ -14,4 +14,8 @@ public interface TitleRepository extends MongoRepository<Title, String> {
     @Query(value = "{ 'startYear': ?0, 'genres': {$regex : ?1 }, 'runtimeMinutes': {$gt: ?2, $lte: ?3 } }",
             sort = "{ 'primaryTitle': 1 }")
     List<Title> findByStartYearAndGenreAndRuntimeMinutesBetweenOrderByPrimaryTitleAsc(Integer startYear, String genre, Integer from, Integer to, Pageable pageable);
+
+    @Query(value = "{ 'startYear': ?0, 'genres': {$regex : ?1 }, runtimeMinutes: {$ne: ?2 } }",
+          sort = "{ 'runtimeMinutes': -1 }")
+    List<Title> findByStartYearAndGenreDesc(Integer startYear, String genre, String runtimeValidation, Pageable pageable);
 }
