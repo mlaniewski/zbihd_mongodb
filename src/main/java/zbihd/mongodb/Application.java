@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import zbihd.mongodb.model.Name;
 import zbihd.mongodb.model.Rating;
+import zbihd.mongodb.model.Title;
 import zbihd.mongodb.repository.*;
 
 import java.util.List;
@@ -48,6 +49,5 @@ public class Application implements CommandLineRunner {
         System.out.println("Title records found:");
         System.out.println(titleRepository.count());
         System.out.println("------------------------------------------------------------------");
-
     }
 }

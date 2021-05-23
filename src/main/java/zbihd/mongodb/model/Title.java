@@ -11,10 +11,10 @@ public class Title {
     private String titleType;
     private String primaryTitle;
     private String originalTitle;
-    private Integer isAdult;
-    private Integer startYear;
-    private Integer endYear;
-    private Integer runtimeMinutes;
+    private String isAdult; //Integer?
+    private String startYear; //Integer?
+    private String endYear; //Integer?
+    private String runtimeMinutes; //Integer?
     private String genres;
 
     public Title() {
@@ -60,35 +60,35 @@ public class Title {
         this.originalTitle = originalTitle;
     }
 
-    public Integer getIsAdult() {
+    public String getIsAdult() {
         return isAdult;
     }
 
-    public void setIsAdult(Integer isAdult) {
+    public void setIsAdult(String isAdult) {
         this.isAdult = isAdult;
     }
 
-    public Integer getStartYear() {
+    public String getStartYear() {
         return startYear;
     }
 
-    public void setStartYear(Integer startYear) {
+    public void setStartYear(String startYear) {
         this.startYear = startYear;
     }
 
-    public Integer getEndYear() {
+    public String getEndYear() {
         return endYear;
     }
 
-    public void setEndYear(Integer endYear) {
+    public void setEndYear(String endYear) {
         this.endYear = endYear;
     }
 
-    public Integer getRuntimeMinutes() {
+    public String getRuntimeMinutes() {
         return runtimeMinutes;
     }
 
-    public void setRuntimeMinutes(Integer runtimeMinutes) {
+    public void setRuntimeMinutes(String runtimeMinutes) {
         this.runtimeMinutes = runtimeMinutes;
     }
 
