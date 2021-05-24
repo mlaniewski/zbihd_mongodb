@@ -9,6 +9,9 @@ import org.springframework.data.mongodb.core.aggregation.AggregationResults;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Component;
 
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.project;
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.unwind;
+
 @Component
 public class Zadanie7 {
 
@@ -21,10 +24,10 @@ public class Zadanie7 {
         System.out.println("------------------------------------------------------------------");
 
         Aggregation aggregation = Aggregation.newAggregation(
-                Aggregation.lookup("Rating", "tconst", "tconst", "rating"),
                 Aggregation.match(Criteria
                         .where("startYear").gte(1994).lte(1996)),
-                Aggregation.sort(Sort.Direction.DESC, "averageRating"),
+                Aggregation.lookup("Rating", "tconst", "tconst", "ratings"),
+                //Aggregation.sort(Sort.Direction.DESC, "ratings.averageRating"),
                 Aggregation.limit(5));
 
         AggregationResults<Document> result = mongoTemplate.aggregate(aggregation, "Title", Document.class);
