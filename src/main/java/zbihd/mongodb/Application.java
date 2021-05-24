@@ -24,6 +24,9 @@ public class Application implements CommandLineRunner {
     @Autowired
     private Zadanie6 zadanie6;
 
+    @Autowired
+    private Zadanie7 zadanie7;
+
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
@@ -34,6 +37,7 @@ public class Application implements CommandLineRunner {
         //zadanie3.perform();
         //zadanie4.perform();
         //zadanie5.perform();
-        zadanie6.perform();;
+        //zadanie6.perform();
+        zadanie7.perform();
     }
 }
