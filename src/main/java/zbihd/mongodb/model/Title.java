@@ -102,6 +102,17 @@ public class Title {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Title{" +
+                "_id='" + _id + '\'' +
+                ", tconst='" + tconst + '\'' +
+                ", titleType='" + titleType + '\'' +
+                ", primaryTitle='" + primaryTitle + '\'' +
+                ", originalTitle='" + originalTitle + '\'' +
+                ", isAdult='" + isAdult + '\'' +
+                ", startYear='" + startYear + '\'' +
+                ", endYear='" + endYear + '\'' +
+                ", runtimeMinutes='" + runtimeMinutes + '\'' +
+                ", genres='" + genres + '\'' +
+                '}';
     }
 }

@@ -4,10 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import zbihd.mongodb.zadania.Zadanie2;
-import zbihd.mongodb.zadania.Zadanie3;
-import zbihd.mongodb.zadania.Zadanie4;
-import zbihd.mongodb.zadania.Zadanie5;
+import zbihd.mongodb.zadania.*;
 
 @SpringBootApplication
 public class Application implements CommandLineRunner {
@@ -24,6 +21,9 @@ public class Application implements CommandLineRunner {
     @Autowired
     private Zadanie5 zadanie5;
 
+    @Autowired
+    private Zadanie6 zadanie6;
+
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
@@ -33,6 +33,7 @@ public class Application implements CommandLineRunner {
         //zadanie2.perform();
         //zadanie3.perform();
         //zadanie4.perform();
-        zadanie5.perform();
+        //zadanie5.perform();
+        zadanie6.perform();;
     }
 }
