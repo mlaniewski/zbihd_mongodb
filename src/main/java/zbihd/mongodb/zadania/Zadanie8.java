@@ -26,7 +26,7 @@ public class Zadanie8 {
 
     public void perform() {
         System.out.println("------------------------------------------------------------------");
-        System.out.println("----------------------- Zadanie 8 --------------------------------");
+        System.out.println("----------------------- Zadanie 9 --------------------------------");
         System.out.println("------------------------------------------------------------------");
 
         List<Rating> topRatings =  ratingRepository.findAllByAverageRatingEquals(10.0);

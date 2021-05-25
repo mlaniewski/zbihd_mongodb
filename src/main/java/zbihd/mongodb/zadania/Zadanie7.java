@@ -25,14 +25,16 @@ public class Zadanie7 {
 
         Aggregation aggregation = Aggregation.newAggregation(
                 Aggregation.match(Criteria
-                        .where("startYear").gte(1994).lte(1996)),
+                        .where("startYear").gte(1994).lte(1996).and("genres").regex(".*Documentary.*")),
                 Aggregation.lookup("Rating", "tconst", "tconst", "ratings"),
                 //Aggregation.sort(Sort.Direction.DESC, "ratings.averageRating"),
-                Aggregation.limit(5));
+                Aggregation.limit(5)
+        );
 
         AggregationResults<Document> result = mongoTemplate.aggregate(aggregation, "Title", Document.class);
 
         result.getMappedResults().forEach(System.out::println);
+        //System.out.println(result.getMappedResults().size());
 
         System.out.println("------------------------------------------------------------------");
     }

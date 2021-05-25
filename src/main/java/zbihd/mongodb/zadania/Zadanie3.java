@@ -27,7 +27,8 @@ public class Zadanie3 {
         System.out.println("------------------------------------------------------------------");
 
         for (Title title : titleList) {
-            System.out.println("tytuł: " + title.getPrimaryTitle() + ", rok produkcji:" + title.getStartYear() + ", kategoria:" + title.getGenres() + ", czas trwania:" + title.getRuntimeMinutes());
+            System.out.println("tytuł: " + title.getPrimaryTitle() + ", rok produkcji:" + title.getStartYear() + ", kategoria:"
+                    + title.getGenres() + ", czas trwania:" + title.getRuntimeMinutes());
         }
 
         System.out.println("------------------------------------------------------------------");

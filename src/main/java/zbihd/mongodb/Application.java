@@ -41,7 +41,7 @@ public class Application implements CommandLineRunner {
         //zadanie4.perform();
         //zadanie5.perform();
         //zadanie6.perform();
-        //zadanie7.perform();
-        zadanie8.perform();
+        zadanie7.perform();
+        //zadanie8.perform();
     }
 }
